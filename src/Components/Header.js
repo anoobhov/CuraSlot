@@ -28,11 +28,11 @@ export default function Header()
             </div>
         </header>
         <main className="pt-39 pl-12 max-w-[55%]">
-        <h1 className="text-7xl font-bold text-">Revolutizing</h1>
+        <h1 className="text-7xl font-bold text-">Yours Shortcut to Healthcare</h1>
         
-        <h1 className="text-7xl pb-5  font-bold">HealthCare</h1>
-        <p className="text-gray-400 text-2xl">Skip the Queue and get Treatment Faster</p>
-        <div className="mt-9">
+        {/* <h1 className="text-7xl pb-5  font-bold">& informed Choices</h1> */}
+        <p className="text-gray-400 text-2xl mt-3">Find, Book, and Review with Ease</p>
+        <div className="mt-6">
         
 <div className="">
 <Link
