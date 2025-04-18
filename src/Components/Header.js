@@ -1,4 +1,5 @@
 import Services from "./Services"
+import { Link } from "react-router-dom";
 export default function Header()
 {
     return(
@@ -35,9 +36,11 @@ export default function Header()
         <div className="mt-9">
         
 <div className="">
-  <button className="text-xl md:text-2xl px-6 py-3 rounded-4xl bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-white font-semibold shadow-md hover:from-blue-600 hover:to-blue-700 transition-all">
-    Explore Services
-  </button>
+<Link
+  to="/services"
+  className="text-xl md:text-2xl px-6 py-3 rounded-4xl bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-white font-semibold shadow-md hover:from-blue-600 hover:to-blue-700 transition-all inline-block text-center">
+  Explore Services
+</Link>
 </div>
 
 </div>

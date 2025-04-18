@@ -8,28 +8,32 @@ import { ServicesData } from "../Utils/ServicesData"
 
 
 export default function Services() {
-    console.log("clicked")
     return (
-        <div className="">
-        <div className="flex flex-wrap">
+        <>
+        <h1 className="text-center font-extrabold text-5xl mb-5">Our Services</h1><hr></hr>
+        <div className="flex justify-center">
+        <div className="flex flex-wrap gap-5 justify-evenly w-[80%] mt-5">
+        
             {ServicesData.map((service) => (
-                <ServicesCard 
-                    key={service.id} 
+                <div key={service.id} className="bg-blue-100 w-[300px] rounded-3xl text-center px-5 py-7">
+                <ServicesCard  
                     heading={service.heading} 
                     description={service.description} 
                 />
+                </div>
             ))}
         </div>
         </div>
+        </>
     );
 }
 
 function ServicesCard({ heading, description }) {
     return (
-        <div className="flex w-full justify-between mb-2 pb-2">
-            <div className="w-[70%]">
+        <div className="flex w-full">
+            <div className="w-full">
                 <h1 className="text-2xl font-semibold">{heading}</h1>
-                <p className="text-xl">{description}</p>
+                <p className="text-xl text-gray-600">{description}</p>
             </div>
         </div>
     );
