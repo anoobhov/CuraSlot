@@ -161,3 +161,24 @@ export const hospitallist = [
       ]
     }
   ]
+
+export const Specialist = [
+
+  
+    "General Medicine",
+    "Cardiology",
+    "Gynaecology",
+    "Orthopedics",
+    "Dermatology",
+    "Neurosurgery",
+    "Gastroenterology",
+    "Urology",
+    "Neurology",
+    "General Surgery",
+    "Multi Speciality Hospital",
+    "Oncology",
+    "Cancer Treatment",
+    "Cardiac Surgery",
+    "Multi Speciality"
+  ]
+  
