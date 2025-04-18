@@ -1,4 +1,3 @@
-import Services from "./Services"
 import { Link } from "react-router-dom";
 export default function Header()
 {
@@ -31,7 +30,7 @@ export default function Header()
         <main className="pt-39 pl-12 max-w-[55%]">
         <h1 className="text-7xl font-bold text-">Revolutizing</h1>
         
-        <h1 className="text-7xl pb-5  font-bold">Hospital Management</h1>
+        <h1 className="text-7xl pb-5  font-bold">HealthCare</h1>
         <p className="text-gray-400 text-2xl">Skip the Queue and get Treatment Faster</p>
         <div className="mt-9">
         
