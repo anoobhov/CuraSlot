@@ -12,7 +12,7 @@ export default function HospitalCards()
 
 const Hcard = ({ hospitals }) => {
   return (
-    <div className="p-4 flex flex-wrap justify-around gap-2 ">
+    <div className="p-4 grid gap-4 ">
       {hospitals.map((hospital, index) => (
         <div
           key={index}
