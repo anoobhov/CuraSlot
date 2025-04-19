@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import Doctorsimg from "../Utils/images/Doctors.jpg"
+import Reviewimg from "../Utils/images/Review.jpg"
+import { ServicesData } from "../Utils/ServicesData"
 export default function Header()
 {
     return(
@@ -27,7 +30,8 @@ export default function Header()
 </div>
             </div>
         </header>
-        <main className="pt-39 pl-12 max-w-[55%]">
+        <main className="pt-39 pl-12">
+        <div className="max-w-[55%] h-[100vh]">
         <h1 className="text-7xl font-bold text-">Yours Shortcut to Healthcare</h1>
         
         {/* <h1 className="text-7xl pb-5  font-bold">& informed Choices</h1> */}
@@ -42,6 +46,43 @@ export default function Header()
 </Link>
 </div>
 
+</div>
+</div>
+{/* bellow main section */}
+{/* Section 1 */}
+<div className="flex flex-col md:flex-row items-center justify-between gap-10 pb-24">
+  <img src={Doctorsimg} alt="Doctors" className="w-[40%] rounded-2xl" />
+  <div className="w-full md:w-[50%] pr-12">
+    <h1 className="text-4xl font-bold mb-4">Innovative Features for Better Healthcare</h1>
+    <p className="mb-4 text-xl">We offer a wide range of features to ease your Medical Experience</p>
+    <hr className="mb-4"/>
+    <h2 className="font-semibold text-2xl mt-1">Online Appointment Scheduling</h2>
+    <p>Reduce waiting times with our intelligent queuing system...</p>
+
+    <h2 className="font-semibold text-2xl mt-4">Real-time Updates on Bed Availability</h2>
+    <p>Stay informed with live updates on bed availability...</p>
+
+    <h2 className="font-semibold text-2xl mt-4">Faster Emergency Admissions</h2>
+    <p>Our optimized emergency admission process ensures...</p>
+  </div>
+</div>
+
+{/* Section 2 */}
+<div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 pb-24">
+  <div className="w-full md:w-[50%]">
+    <h1 className="text-4xl font-bold mb-4">Trusted by Patients and Providers</h1>
+    <p className="mb-4 text-xl">We offer a wide range of features to ease your Medical Experience</p>
+    <hr className="mb-4"/>
+    <h2 className="font-semibold text-2xl mt-1">Online Appointment Scheduling</h2>
+    <p>Reduce waiting times with our intelligent queuing system...</p>
+
+    <h2 className="font-semibold text-2xl mt-4">Real-time Updates on Bed Availability</h2>
+    <p>Stay informed with live updates on bed availability...</p>
+
+    <h2 className="font-semibold text-2xl mt-4">Faster Emergency Admissions</h2>
+    <p>Our optimized emergency admission process ensures...</p>
+  </div>
+  <img src={Reviewimg} alt="Review" className="w-[40%] rounded-2xl pr-12" />
 </div>
 
         </main>
