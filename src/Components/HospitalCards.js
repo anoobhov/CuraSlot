@@ -1,11 +1,12 @@
 import { hospitallist } from "../Utils/HospitalList";
-
+// import AnimateBg from "./AnimateBg";
 export default function HospitalCards()
 {
     return (
         <div className="min-h-screen bg-blue-300 p-6">
           <h1 className="text-2xl font-bold mb-4">Hospitals in Kolkata 🏥</h1>
           <Hcard hospitals={hospitallist} />
+          {/* <AnimateBg/> */}
         </div>
       );
 }

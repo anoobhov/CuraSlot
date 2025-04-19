@@ -1,63 +1,3 @@
-// import React from "react";
-// import { Stethoscope, Syringe, Thermometer, Ambulance, Hospital, Pill, HeartPulse, UserPlus, Microscope, Bandage } from "lucide-react";
-
-// const icons = [
-//   Stethoscope,
-//   Syringe,
-//   Thermometer,
-//   Ambulance,
-//   Hospital,
-//   Pill,
-//   HeartPulse,
-//   UserPlus,
-//   Microscope,
-//   Bandage,
-// ];
-
-
-// const AnimateBg = () => {
-//   return (
-//     <div className="fixed top-0 left-0 w-full h-screen overflow-hidden pointer-events-none z-0">
-//       {icons.map((Icon, index) => {
-//         const top = Math.random() * 80 + 10; // 10% to 90% vertically
-//         const left = Math.random() * 90; // 0% to 90% horizontally
-//         const delay = Math.random() * 2; // 0s to 2s delay
-//         const duration = 2 + Math.random() * 2; // 2s to 4s
-//         // const color_index = Math.random()*10;
-//         return (
-//           <div
-//             key={index}
-//             className="absolute text-blue-600 opacity-80"
-//             style={{
-//               top: `${top}%`,
-//               left: `${left}%`,
-//               animation: `floatY ${duration}s ease-in-out ${delay}s infinite alternate`,
-//             }}
-//           >
-//             <Icon size={45} />
-//           </div>
-//         );
-//       })}
-
-//       <style jsx>{`
-//         @keyframes floatY {
-//           from {
-//             transform: translateY(-10px);
-//           }
-//           to {
-//             transform: translateY(10px);
-//           }
-//         }
-//       `}</style>
-//     </div>
-//   );
-// };
-
-// export default AnimateBg;
-
-
-
-
 
 import React from "react";
 import {
@@ -126,7 +66,7 @@ const AnimateBg = () => {
             opacity: 0.8,
           }}
         >
-          <Icon />
+          <Icon size={60}/>
         </div>
       ))}
     </div>
