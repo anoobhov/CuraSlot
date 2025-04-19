@@ -8,7 +8,9 @@ export default function Appointment()
     return(<>
     
     <h1 className='text-center text-4xl font-mono font-bold'>Doctor Appointment Form</h1>
-    <PatientForm></PatientForm>;
+    <div className='backdrop-blur-md bg-white/30 border border-white/20 rounded-xl shadow-lg p-6 max-w-md mx-auto mt-10'>
+    <PatientForm></PatientForm>
+    </div>
     <AnimateBg/>
     
     </>)
@@ -82,7 +84,7 @@ function PersonalDetailsStep ({ formData, handleChange })  {
 
 const MedicalDetailsStep = ({ formData, handleChange }) => {
   return (
-    <div>
+    <div className='backdrop-blur-md bg-white/30 border border-white/20 rounded-xl shadow-lg p-6'>
       <h2 className="text-xl font-semibold mb-4">Medical Details</h2>
       
       <div className="mb-4">

@@ -76,23 +76,23 @@ function ReviewSection(){
     <div className="flex flex-col md:flex-row items-center justify-between gap-10 pb-24">
       {/* Text from left */}
       <motion.div
-        className="w-full md:w-[50%]"
+        className="w-full md:w-[50%] backdrop-blur-md bg-white/30 border border-white/20 rounded-xl shadow-lg p-6 max-w-md mx-auto mt-10"
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true, amount: 0.5 }}
       >
         <h1 className="text-4xl font-bold mb-4">Trusted by Patients and Providers</h1>
-        <p className="mb-4 text-xl">Our platform has been trusted by thousands of patients and healthcare providers to deliver exceptional care and experiences.</p>
+        <p className="mb-4 text-xl text-gray-500">Our platform has been trusted by thousands of patients and healthcare providers to deliver exceptional care and experiences.</p>
         <hr className="mb-4" />
         <h2 className="font-semibold text-2xl mt-1">10,000+ Patients Served</h2>
-        <p>High-quality care delivered with compassion and efficiency.</p>
+        <p className="text-cyan-600">High-quality care delivered with compassion and efficiency.</p>
 
         <h2 className="font-semibold text-2xl mt-4">500+ Healthcare Providers</h2>
-        <p>Top professionals from across specialties on one platform.</p>
+        <p className="text-cyan-600">Top professionals from across specialties on one platform.</p>
 
         <h2 className="font-semibold text-2xl mt-4">4.9/5 Rating</h2>
-        <p>Trusted reviews from real patients across the country.</p>
+        <p className="text-cyan-600">Trusted reviews from real patients across the country.</p>
       </motion.div>
 
       {/* Image from right */}
@@ -125,23 +125,23 @@ function ServiceSection() {
   
         {/* Text animation from right */}
         <motion.div
-          className="w-full md:w-[50%]"
+          className="w-full md:w-[50%] backdrop-blur-md bg-white/30 border border-white/20 rounded-xl shadow-lg p-6 max-w-md mx-auto mt-10"
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          <h1 className="text-4xl font-bold mb-4">Innovative Features for Better Healthcare</h1>
-          <p className="mb-4 text-xl">We offer a wide range of features to ease your Medical Experience</p>
+          <h1 className="text-3xl font-bold mb-4">Innovative Features for Better Healthcare</h1>
+          <p className="mb-4 text-gray-500">We offer a wide range of features to ease your Medical Experience</p>
           <hr className="mb-4" />
           <h2 className="font-semibold text-2xl mt-1">Online Appointment Scheduling</h2>
-          <p>Reduce waiting times with our intelligent queuing system...</p>
+          <p className="text-cyan-600">Reducing waiting time & ensuring a smooth flow through the OPD process.</p>
   
           <h2 className="font-semibold text-2xl mt-4">Real-time Updates on Bed Availability</h2>
-          <p>Stay informed with live updates on bed availability...</p>
+          <p className="text-cyan-600">Allowing for quicker decisions and streamlined patient admissions.</p>
   
           <h2 className="font-semibold text-2xl mt-4">Faster Emergency Admissions</h2>
-          <p>Our optimized emergency admission process ensures...</p>
+          <p className="text-cyan-600" >Ensures critical patients receive timely care without unnecessary delays.</p>
         </motion.div>
       </div>
     );
@@ -189,4 +189,10 @@ function ServiceSection() {
         </main>
         </>
     )
+}
+
+
+function footer()
+{
+
 }
