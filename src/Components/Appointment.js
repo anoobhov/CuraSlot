@@ -1,11 +1,16 @@
 import { useState } from 'react';
 import { hospitallist } from '../Utils/HospitalList';
 import { Specialist } from '../Utils/HospitalList';
+import AnimateBg from './AnimateBg';
+
 export default function Appointment()
 {
     return(<>
+    
     <h1 className='text-center text-4xl font-mono font-bold'>Doctor Appointment Form</h1>
     <PatientForm></PatientForm>;
+    <AnimateBg/>
+    
     </>)
 }
 

@@ -1,0 +1,137 @@
+// import React from "react";
+// import { Stethoscope, Syringe, Thermometer, Ambulance, Hospital, Pill, HeartPulse, UserPlus, Microscope, Bandage } from "lucide-react";
+
+// const icons = [
+//   Stethoscope,
+//   Syringe,
+//   Thermometer,
+//   Ambulance,
+//   Hospital,
+//   Pill,
+//   HeartPulse,
+//   UserPlus,
+//   Microscope,
+//   Bandage,
+// ];
+
+
+// const AnimateBg = () => {
+//   return (
+//     <div className="fixed top-0 left-0 w-full h-screen overflow-hidden pointer-events-none z-0">
+//       {icons.map((Icon, index) => {
+//         const top = Math.random() * 80 + 10; // 10% to 90% vertically
+//         const left = Math.random() * 90; // 0% to 90% horizontally
+//         const delay = Math.random() * 2; // 0s to 2s delay
+//         const duration = 2 + Math.random() * 2; // 2s to 4s
+//         // const color_index = Math.random()*10;
+//         return (
+//           <div
+//             key={index}
+//             className="absolute text-blue-600 opacity-80"
+//             style={{
+//               top: `${top}%`,
+//               left: `${left}%`,
+//               animation: `floatY ${duration}s ease-in-out ${delay}s infinite alternate`,
+//             }}
+//           >
+//             <Icon size={45} />
+//           </div>
+//         );
+//       })}
+
+//       <style jsx>{`
+//         @keyframes floatY {
+//           from {
+//             transform: translateY(-10px);
+//           }
+//           to {
+//             transform: translateY(10px);
+//           }
+//         }
+//       `}</style>
+//     </div>
+//   );
+// };
+
+// export default AnimateBg;
+
+
+
+
+
+import React from "react";
+import {
+  Heart,
+  Stethoscope,
+  Syringe,
+  Hospital,
+  Ambulance,
+  Thermometer,
+  Microscope,
+  Pill,
+  UserPlus,
+  Bandage,
+} from "lucide-react";
+
+const icons = [
+  Heart,
+  Stethoscope,
+  Syringe,
+  Hospital,
+  Ambulance,
+  Thermometer,
+  Microscope,
+  Pill,
+  UserPlus,
+  Bandage,
+];
+
+const positions = [
+  { top: "10%", left: "5%" },
+  { top: "20%", left: "25%" },
+  { top: "15%", left: "45%" },
+  { top: "30%", left: "70%" },
+  { top: "40%", left: "85%" },
+  { top: "60%", left: "10%" },
+  { top: "55%", left: "35%" },
+  { top: "70%", left: "60%" },
+  { top: "80%", left: "80%" },
+  { top: "65%", left: "50%" },
+];
+
+//const sizes = ["w-8 h-8", "w-10 h-10", "w-13 h-13", "w-15 h-15", "w-20 h-20"];
+const colors = [
+  "text-red-400",
+  "text-blue-400",
+  "text-green-400",
+  "text-yellow-400",
+  "text-purple-400",
+  "text-pink-400",
+  "text-orange-400",
+  "text-cyan-400",
+  "text-emerald-400",
+  "text-rose-400",
+];
+
+const AnimateBg = () => {
+  return (
+    <div className="fixed top-0 left-0 w-full h-screen overflow-hidden z-[-1]">
+      {icons.map((Icon, i) => (
+        <div
+          key={i}
+          className={`absolute animate-float w-100 h-100 ${colors[i % colors.length]}`}
+          style={{
+            top: positions[i].top,
+            left: positions[i].left,
+            opacity: 0.8,
+          }}
+        >
+          <Icon />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default AnimateBg;
+

@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Doctorsimg from "../Utils/images/Doctors.jpg"
 import Reviewimg from "../Utils/images/Review.jpg"
+import AnimateBg from "./AnimateBg";
+
 import { motion, AnimatePresence } from "framer-motion";
 export default function Header()
 {
@@ -69,7 +71,7 @@ const ServicesButtons = () => {
   );
 };
 
-const SecondSection = () => {
+function ReviewSection(){
   return (
     <div className="flex flex-col md:flex-row items-center justify-between gap-10 pb-24">
       {/* Text from left */}
@@ -107,7 +109,7 @@ const SecondSection = () => {
   );
 };
 
-  function Section() {
+function ServiceSection() {
     return(
       <div className="flex flex-col md:flex-row items-center justify-between gap-10 pb-24">
         {/* Image animation from left */}
@@ -175,73 +177,15 @@ const SecondSection = () => {
         <div className="h-[100vh]">
         <h1 className="text-7xl font-bold text-">Yours Shortcut</h1>
         <h1 className="text-7xl font-bold">to Healthcare</h1>
-        
-        {/* <h1 className="text-7xl pb-5  font-bold">& informed Choices</h1> */}
         <p className="text-gray-400 text-2xl mt-3">Find, Book, and Review with Ease</p>
         <div className="mt-6">
-        
-{/* <div className="text-xl md:text-2xl px-6 py-3 rounded-4xl mr-3 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-white font-semibold shadow-md hover:from-blue-600 hover:to-blue-700 transition-all inline-block text-center">
-  Explore Services
-  </div>
-<div className="text-xl px-6 py-3 rounded-xl mr-1 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-white font-semibold shadow-md hover:from-amber-600 hover:to-amber-700 transition-all inline-block text-center">
-Book Appointment</div>
-<div className="text-xl px-6 py-3 rounded-xl mr-1 bg-gradient-to-r from-green-400 via-green-500 to-green-600 text-white font-semibold shadow-md hover:from-green-600 hover:to-green-700 transition-all inline-block text-center">
-  Check Bed Availability
-  </div>
-  <div className="text-xl px-6 py-3 rounded-xl bg-gradient-to-r from-red-400 via-red-500 to-red-600 text-white font-semibold shadow-md hover:from-red-600 hover:to-red-700 transition-all inline-block text-center">
-  Urgent Addmission
-  </div> */}
-  
-  <ServicesButtons/>
-
-
+          <ServicesButtons/>
+          <AnimateBg/>
+        </div>
 </div>
-</div>
-{/* bellow main section */}
-{/* Serivec Summary */}
-<Section></Section>
-{/* <div className="flex flex-col md:flex-row items-center justify-between gap-10 pb-24">
-  <img src={Doctorsimg} alt="Doctors" className="w-[40%] rounded-2xl" />
-  <div className="w-full md:w-[50%] pr-12">
-    <h1 className="text-4xl font-bold mb-4">Innovative Features for Better Healthcare</h1>
-    <p className="mb-4 text-xl">We offer a wide range of features to ease your Medical Experience</p>
-    <hr className="mb-4"/>
-    <h2 className="font-semibold text-2xl mt-1">Online Appointment Scheduling</h2>
-    <p>Reduce waiting times with our intelligent queuing system...</p>
 
-    <h2 className="font-semibold text-2xl mt-4">Real-time Updates on Bed Availability</h2>
-    <p>Stay informed with live updates on bed availability...</p>
-
-    <h2 className="font-semibold text-2xl mt-4">Faster Emergency Admissions</h2>
-    <p>Our optimized emergency admission process ensures...</p>
-  </div>
-</div> */}
-
-
-
-
-
-
-
-{/* Reviews */}
-<SecondSection/>
-{/* <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 pb-24">
-  <div className="w-full md:w-[50%]">
-    <h1 className="text-4xl font-bold mb-4">Trusted by Patients and Providers</h1>
-    <p className="mb-4 text-xl">We offer a wide range of features to ease your Medical Experience</p>
-    <hr className="mb-4"/>
-    <h2 className="font-semibold text-2xl mt-1">Online Appointment Scheduling</h2>
-    <p>Reduce waiting times with our intelligent queuing system...</p>
-
-    <h2 className="font-semibold text-2xl mt-4">Real-time Updates on Bed Availability</h2>
-    <p>Stay informed with live updates on bed availability...</p>
-
-    <h2 className="font-semibold text-2xl mt-4">Faster Emergency Admissions</h2>
-    <p>Our optimized emergency admission process ensures...</p>
-  </div>
-  <img src={Reviewimg} alt="Review" className="w-[40%] rounded-2xl pr-12" />
-</div> */}
-
+<ServiceSection/>
+<ReviewSection/>
         </main>
         </>
     )
