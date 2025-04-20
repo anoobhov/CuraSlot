@@ -2,14 +2,17 @@ import { useState } from 'react';
 import { hospitallist } from '../Utils/HospitalList';
 import { Specialist } from '../Utils/HospitalList';
 import AnimateBg from './AnimateBg';
+import Nav from './Nav';
 
 export default function Appointment()
 {
     return(<>
-    
+    <Nav/>
+    <div className='backdrop-blur-md bg-white/30 border border-white/20 rounded-xl shadow-lg p-6 max-w-md mx-auto mt-40'>
     <h1 className='text-center text-4xl font-mono font-bold'>Doctor Appointment Form</h1>
-    <div className='backdrop-blur-md bg-white/30 border border-white/20 rounded-xl shadow-lg p-6 max-w-md mx-auto mt-10'>
+    <div >
     <PatientForm></PatientForm>
+    </div>
     </div>
     <AnimateBg/>
     

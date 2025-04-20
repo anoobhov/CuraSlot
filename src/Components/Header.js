@@ -3,7 +3,7 @@ import { useState } from "react";
 import Doctorsimg from "../Utils/images/Doctors.jpg"
 import Reviewimg from "../Utils/images/Review.jpg"
 import AnimateBg from "./AnimateBg";
-
+import Nav from "./Nav"
 import { motion, AnimatePresence } from "framer-motion";
 export default function Header()
 {
@@ -76,7 +76,7 @@ function ReviewSection(){
     <div className="flex flex-col md:flex-row items-center justify-between gap-10 pb-24">
       {/* Text from left */}
       <motion.div
-        className="w-full md:w-[50%] backdrop-blur-md bg-white/30 border border-white/20 rounded-xl shadow-lg p-6 max-w-md mx-auto mt-10"
+        className="w-full md:w-[50%] backdrop-blur-md bg-white/30 border border-white/20 rounded-xl shadow-lg p-6 max-w-md mt-10"
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -99,7 +99,7 @@ function ReviewSection(){
       <motion.img
         src={Reviewimg}
         alt="Review"
-        className="w-[40%] rounded-2xl"
+        className="w-[40%] rounded-2xl mx-auto"
         initial={{ x: 100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -149,30 +149,7 @@ function ServiceSection() {
 
     return(
         <>
-        <header>
-            {/* Logo */}
-            <div className="bg-[linear-gradient(90deg,_#a1c4fd_0%,_#c2e9fb_100%)] top-0 fixed z-[100] py-7 flex justify-between items-center w-full px-7">
-                <p className="font-extrabold text-2xl">OPDs</p>
-                <div>
-                {/* <a href="" className="font-extrabold p-5">About</a>
-                <a href="" className="font-extrabold ">Hospitals List</a> */}
-                </div>
-                <div>                
-                <div className="flex gap-4">
-  <button className="px-5 py-2 rounded-xl bg-white/70 text-blue-700 font-semibold shadow-md backdrop-blur-sm hover:bg-white/90 transition">
-    Get Started
-  </button>
-  {/* <button className="px-5 py-2 rounded-xl bg-white/70 text-green-700 font-semibold shadow-md backdrop-blur-sm hover:bg-white/90 transition">
-    Register
-  </button> */}
-  <button className="px-5 py-2 rounded-xl bg-white/70 text-gray-800 font-semibold shadow-md backdrop-blur-sm hover:bg-white/90 transition">
-    Light Mode
-  </button>
-</div>
-
-</div>
-            </div>
-        </header>
+        <Nav/>
         <main className="pt-39 pl-12">
         <div className="h-[100vh]">
         <h1 className="text-7xl font-bold text-">Yours Shortcut</h1>
