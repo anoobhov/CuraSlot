@@ -1,9 +1,11 @@
 import { hospitallist } from "../Utils/HospitalList";
 import AnimateBg from "./AnimateBg";
-
+// import Nav from "./Nav";
 // Main Component
 export default function HospitalCards() {
   return (
+    <>
+    {/* <Nav/> */}
     <div className="min-h-screen bg-transparent p-6">
       <h1 className="text-2xl font-bold mb-4 text-black">Hospitals in Kolkata 🏥</h1>
       <div className="flex flex-wrap gap-6 justify-center">
@@ -12,6 +14,7 @@ export default function HospitalCards() {
       </div>
       
     </div>
+    </>
   );
 }
 
@@ -32,9 +35,9 @@ const Hcard = ({ hospitalList }) => {
           />
 
           {/* Name & Rating */}
-          <div className="text-center mb-2">
-            <h2 className="text-lg font-semibold text-gray-800">{hospital.name}</h2>
-            <p className="text-sm text-yellow-500">⭐ {hospital.rating}</p>
+          <div className=" mb-2">
+            <h2 className="text-lg font-semibold text-center text-gray-800">{hospital.name}</h2>
+            <p className="text-sm text-center text-yellow-500">⭐ {hospital.rating}</p>
           </div>
 
           {/* Location */}

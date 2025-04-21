@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import { Link } from "react-router-dom"
 export default function Nav()
 {
 
@@ -7,7 +7,7 @@ export default function Nav()
   
   const [navColor,setnavColor] = useState(false)
   const changeNavColor = ()=>{
-    if(window.scrollY >=60)
+    if(window.scrollY >=1)
     {
       setnavColor(true)
     }else{
@@ -23,7 +23,9 @@ export default function Nav()
       ? "bg-gradient-to-r from-blue-300 to-blue-200 backdrop-blur-md bg-opacity-60"
       :"bg-white/10 backdrop-blur-md"
   }`}>
+              <Link to="/">
                 <p className="font-extrabold text-2xl">OPDs</p>
+                </Link>
                 <div>
                 
                 </div>
