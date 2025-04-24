@@ -87,7 +87,7 @@ function PersonalDetailsStep ({ formData, handleChange })  {
 
 const MedicalDetailsStep = ({ formData, handleChange }) => {
   return (
-    <div className='backdrop-blur-md bg-white/30 border border-white/20 rounded-xl shadow-lg p-6'>
+    <div >
       <h2 className="text-xl font-semibold mb-4">Medical Details</h2>
       
       <div className="mb-4">

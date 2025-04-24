@@ -7,6 +7,27 @@ import Nav from "./Nav"
 import { motion, AnimatePresence } from "framer-motion";
 export default function Header()
 {
+
+    return(
+        <>
+        <Nav/>
+        <main className="pt-39 pl-12">
+        <div className="h-[100vh]">
+        <h1 className="text-7xl font-bold text-">Yours Shortcut</h1>
+        <h1 className="text-7xl font-bold">to Healthcare</h1>
+        <p className="text-gray-400 text-2xl mt-3">Find, Book, and Review with Ease</p>
+        <div className="mt-6">
+          <ServicesButtons/>
+          <AnimateBg/>
+        </div>
+        </div>
+        <ServiceSection/>
+        <ReviewSection/>
+        </main>
+        <Footer/>
+        </>
+    )
+}
 // service button
 const ServicesButtons = () => {
   const [showOptions, setShowOptions] = useState(false);
@@ -149,29 +170,55 @@ function ServiceSection() {
     );
   }
 
+function Footer()
+{
     return(
-        <>
-        <Nav/>
-        <main className="pt-39 pl-12">
-        <div className="h-[100vh]">
-        <h1 className="text-7xl font-bold text-">Yours Shortcut</h1>
-        <h1 className="text-7xl font-bold">to Healthcare</h1>
-        <p className="text-gray-400 text-2xl mt-3">Find, Book, and Review with Ease</p>
-        <div className="mt-6">
-          <ServicesButtons/>
-          <AnimateBg/>
-        </div>
-</div>
+      <>
+        <footer className="py-7 bg-white/10 backdrop-blur-md px-12">
+        <div className="flex justify-between">
+            {/* about app */}
+            <div className="w-[25vw]">
+              <h1 className="text-2xl font-bold">OPDs</h1>
+              <p>We simplifies hospital management with efficient queuing models, OPDs & inventory management</p>
+            </div>
 
-<ServiceSection/>
-<ReviewSection/>
-        </main>
-        </>
+            <div className="w-[25vw]">
+            <h1 className="text-xl font-semibold mb-1">Quick Links</h1>
+            <p className="hover:text-blue-400 hover:cursor-pointer mb-0.5">&#x2022; Appointment</p>
+            <p className="hover:text-blue-400 hover:cursor-pointer mb-0.5">&#x2022; Bed Availability</p>
+            <p className="hover:text-blue-400 hover:cursor-pointer mb-0.5">&#x2022; Urgent Admission</p>
+            <p className="hover:text-blue-400 hover:cursor-pointer mb-0.5">&#x2022; About Us</p>
+            <p className="hover:text-blue-400 hover:cursor-pointer mb-0.5">&#x2022; Career</p>
+            </div>
+
+            <div className="flex justify-center items-center  bg-transparent">
+      <FlipCard />
+    </div>
+    </div>
+    <hr className="mt-6"></hr>
+    <h1 className="text-center mt-6">&copy;2025 OPD.All rights reserved.</h1>
+        </footer>
+      </>
     )
 }
 
+const FlipCard = () => {
+  return (
+    <div className="w-64 h-40 perspective group cursor-pointer ">
+      <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+        {/* Front Side */}
+        <div className="absolute w-full h-full backface-hidden py-5 bg-gradient-to-r from-blue-400 to-blue-300 backdrop-blur-md bg-opacity-60 text-gray-700 font-semibold text-2xl flex items-center justify-center rounded-xl shadow-xl">
+          Contact us
+        </div>
 
-function footer()
-{
-
-}
+        {/* Back Side */}
+        <div className="absolute w-full h-full backface-hidden rotate-y-180 py-5 bg-gradient-to-r from-blue-700 to-blue-500 backdrop-blur-md bg-opacity-60 text-white flex flex-col items-center justify-center rounded-xl shadow-xl p-4">
+          <h1 className="text-lg font-bold">Address</h1>
+          <p className="text-sm text-center">27A, Ballygunge Park Road, Kolkata, West Bengal 700019</p>
+          <h1 className="text-lg font-bold">Email</h1>
+          <p className="text-sm text-center">random@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  );
+};

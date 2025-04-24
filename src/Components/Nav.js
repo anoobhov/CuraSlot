@@ -18,10 +18,10 @@ export default function Nav()
     return(
         <header>
             {/* Logo */}
-            <div className={`top-0 fixed z-[100] py-7 flex justify-between items-center w-full px-7 transition-all duration-1000 ease-in-out ${
+            <div className={`top-0 fixed z-[100]  flex justify-between items-center w-full px-7 transition-all duration-500 ease-in-out ${
     navColor
-      ? "bg-gradient-to-r from-blue-300 to-blue-200 backdrop-blur-md bg-opacity-60"
-      :"bg-white/10 backdrop-blur-md"
+      ? "py-5 bg-gradient-to-r from-blue-300 to-blue-200 backdrop-blur-md bg-opacity-60 "
+      :"bg-white/10 backdrop-blur-md py-7"
   }`}>
               <Link to="/">
                 <p className="font-extrabold text-2xl">OPDs</p>
