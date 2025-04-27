@@ -213,9 +213,9 @@ const FlipCard = () => {
 
         {/* Back Side */}
         <div className="absolute w-full h-full backface-hidden rotate-y-180 py-5 bg-gradient-to-r from-blue-700 to-blue-500 backdrop-blur-md bg-opacity-60 text-white flex flex-col items-center justify-center rounded-xl shadow-xl p-4">
-          <h1 className="text-lg font-bold">Address</h1>
+          <h1 className="text-lg font-bold">📍Address</h1>
           <p className="text-sm text-center">27A, Ballygunge Park Road, Kolkata, West Bengal 700019</p>
-          <h1 className="text-lg font-bold">Email</h1>
+          <h1 className="text-lg font-bold">✉️Email</h1>
           <p className="text-sm text-center">random@gmail.com</p>
         </div>
       </div>

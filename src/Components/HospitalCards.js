@@ -25,7 +25,7 @@ const Hcard = ({ hospitalList }) => {
       {hospitalList.map((hospital, index) => (
         <div
           key={index}
-          className="flex flex-col transition-all duration-200 ease-linear  items-center p-4 bg-blue-50 rounded-lg w-60 hover:shadow-md hover:scale-102 hover:bg-blue-100"
+          className="flex flex-col transition-all duration-200 ease-linear  items-center p-4 bg-blue-50 rounded-lg w-60 hover:shadow-md hover:bg-blue-100"
         >
           {/* Hospital Image */}
           <img
@@ -50,6 +50,10 @@ const Hcard = ({ hospitalList }) => {
             🛏️ Beds Available:{" "}
             <span className="text-blue-600">{hospital.beds_available}</span>
           </p>
+          {/* Location link */}
+          <a className="text-sm font-medium text-gray-700 text-center mt-3 p-0 hover:underline decoration-dotted" 
+          href={`https://www.google.com/maps/search/?api=1&query=${hospital.lat},${hospital.long}`} target="_blank">
+          🌍Map</a>
         </div>
       ))}
     </>
