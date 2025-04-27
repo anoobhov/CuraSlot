@@ -37,7 +37,7 @@ const Hcard = ({ hospitalList }) => {
           {/* Name & Rating */}
           <div className=" mb-2">
             <h2 className="text-lg font-semibold text-center text-gray-800">{hospital.name}</h2>
-            <p className="text-sm text-center text-yellow-500">⭐ {hospital.rating}</p>
+            <p className="text-sm text-center text-yellow-600">⭐ {hospital.rating}</p>
           </div>
 
           {/* Location */}

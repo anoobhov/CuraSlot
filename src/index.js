@@ -6,6 +6,7 @@ import Appointment from "./Components/Appointment"
 import HospitalCards from "./Components/HospitalCards";
 import { BrowserRouter,Route,Routes } from "react-router-dom";
 import Urgent from "./Components/Urgent";
+import MyAppointments from "./Components/MyAppointments";
 function App()
 {
     return(
@@ -16,6 +17,7 @@ function App()
             <Route path="/Appointment" element={<Appointment />} />
             <Route path="/BedAvl" element={<HospitalCards />} />
             <Route path="/urgent" element={<Urgent />} />
+            <Route path="/myapt" element={<MyAppointments />} />
             </Routes>
         </BrowserRouter>
     )

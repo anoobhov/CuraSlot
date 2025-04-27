@@ -208,7 +208,7 @@ const FlipCard = () => {
       <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
         {/* Front Side */}
         <div className="absolute w-full h-full backface-hidden py-5 bg-gradient-to-r from-blue-400 to-blue-300 backdrop-blur-md bg-opacity-60 text-gray-700 font-semibold text-2xl flex items-center justify-center rounded-xl shadow-xl">
-          Contact us
+        &#128222;Contact us
         </div>
 
         {/* Back Side */}

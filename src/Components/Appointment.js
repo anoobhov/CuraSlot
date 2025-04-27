@@ -241,12 +241,16 @@ function PatientForm()
   
     const handleSubmit = (event) => {
       event.preventDefault();
-      console.log('Form Data Submitted:', formData);
-      // Here you would typically send the data to your backend
+      if (currentStep !== 3) {
+        return;
+      }
+      //console.log('Form Data Submitted:', formData);
+      localStorage.setItem('patientFormData', JSON.stringify(formData));
+      alert('Form submitted!');
     };
   
     return (
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-8 p-6 border rounded shadow-md">
+      <form  className="max-w-md mx-auto mt-8 p-6 border rounded shadow-md">
         {/* Render different sections based on currentStep */}
         {currentStep === 1 && <PersonalDetailsStep formData={formData} handleChange={handleChange} />}
         {currentStep === 2 && (
@@ -272,7 +276,7 @@ function PatientForm()
               Next
             </button>
           ) : (
-            <button type="submit" className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
+            <button type="button" onClick={handleSubmit} className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
               Submit
             </button>
           )}
