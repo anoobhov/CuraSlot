@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { hospitallist } from '../Utils/HospitalList';
 import { Specialist } from '../Utils/HospitalList';
 import AnimateBg from './AnimateBg';
@@ -209,12 +210,12 @@ function PatientForm()
       age: '',
       gender: '',
       contact: '',
-      disease: '',
       diseaseDescription: '',
       appointmentDate: '',
       appointmentTime: '',
       previousReports: null, // For file uploads
     });
+    const navigate = useNavigate()
   
     const nextStep = () => {
       setCurrentStep(currentStep + 1);
@@ -246,18 +247,19 @@ function PatientForm()
       }
       //console.log('Form Data Submitted:', formData);
       const formPayload = { ...formData, id: Date.now() }; // Adding a unique ID based on timestamp
-      console.log('Form Data Submitted:', formData);
+      //console.log('Form Data Submitted:', formData);
     
-      // Retrieve the current appointments from localStorage
+      //Getting current appointments from localStorage
       const existingAppointments = JSON.parse(localStorage.getItem('appointments')) || [];
     
-      // Add the new appointment to the array
+      //Add the new appointment to the array
       existingAppointments.push(formPayload);
     
-      // Save the updated array back to localStorage
+      //Save the updated array to local storage
       localStorage.setItem('appointments', JSON.stringify(existingAppointments));
     
       alert('Appointment submitted and saved!');
+      navigate("/myapt")
     };
     
   

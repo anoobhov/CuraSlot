@@ -31,9 +31,14 @@ export default function Nav()
                 </div>
                 <div>                
                 <div className="flex gap-4">
-  <button className="px-5 py-2 rounded-xl bg-white/70 text-blue-700 font-semibold shadow-md backdrop-blur-sm hover:bg-white/90 transition">
-    Get Started
+                  <Link to="/myapt">
+                <button className="px-5 py-2 rounded-xl bg-white/60 text-blue-700 font-semibold shadow-md backdrop-blur-sm hover:bg-white/90 cursor-pointer transition">
+    Appointments
   </button>
+  </Link>
+  {/* <button className="px-5 py-2 rounded-xl bg-white/70 text-blue-700 font-semibold shadow-md backdrop-blur-sm hover:bg-white/90 transition">
+    Get Started
+  </button> */}
   
   <button className="px-5 py-2 rounded-xl bg-white/70 text-gray-800 font-semibold shadow-md backdrop-blur-sm hover:bg-white/90 transition">
     Light Mode
