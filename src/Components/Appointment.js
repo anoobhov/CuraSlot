@@ -245,9 +245,21 @@ function PatientForm()
         return;
       }
       //console.log('Form Data Submitted:', formData);
-      localStorage.setItem('patientFormData', JSON.stringify(formData));
-      alert('Form submitted!');
+      const formPayload = { ...formData, id: Date.now() }; // Adding a unique ID based on timestamp
+      console.log('Form Data Submitted:', formData);
+    
+      // Retrieve the current appointments from localStorage
+      const existingAppointments = JSON.parse(localStorage.getItem('appointments')) || [];
+    
+      // Add the new appointment to the array
+      existingAppointments.push(formPayload);
+    
+      // Save the updated array back to localStorage
+      localStorage.setItem('appointments', JSON.stringify(existingAppointments));
+    
+      alert('Appointment submitted and saved!');
     };
+    
   
     return (
       <form  className="max-w-md mx-auto mt-8 p-6 border rounded shadow-md">
