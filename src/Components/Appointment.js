@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { hospitallist } from '../Utils/HospitalList';
 import { Specialist } from '../Utils/HospitalList';
 import AnimateBg from './AnimateBg';
@@ -35,6 +35,7 @@ function PersonalDetailsStep ({ formData, handleChange })  {
           name="name"
           value={formData.name}
           onChange={handleChange}
+          required
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
       </div>
@@ -63,9 +64,9 @@ function PersonalDetailsStep ({ formData, handleChange })  {
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         >
           <option value="">Select Gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="other">Other</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
         </select>
       </div>
       <div className="mb-4">
@@ -151,6 +152,9 @@ const MedicalDetailsStep = ({ formData, handleChange }) => {
 };
 
 const AppointmentDetailsStep = ({ formData, handleChange, handleFileChange }) => {
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const minDate = tomorrow.toISOString().split("T")[0];
   return (
     <div>
       <h2 className="text-xl font-semibold mb-4">Appointment Details & Reports</h2>
@@ -164,6 +168,7 @@ const AppointmentDetailsStep = ({ formData, handleChange, handleFileChange }) =>
           name="appointmentDate"
           value={formData.appointmentDate}
           onChange={handleChange}
+          min={minDate}
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
       </div>
@@ -218,6 +223,26 @@ function PatientForm()
     const navigate = useNavigate()
   
     const nextStep = () => {
+      if (!formData.name.trim()||!formData.age.trim()||!formData.gender.trim()||!/^\d{10}$/.test(formData.contact)) {
+        alert("Please fill out the form Correctly before procceding.");
+        return;
+      }
+      if(currentStep === 2)
+      {
+        if (!formData.diseaseDescription.trim()||!formData.Specialist.trim()||!formData.hospital.trim())
+        {
+          alert("Please fill the form Correctly!")
+          return;
+        }
+      }
+      if(currentStep === 3)
+        {
+          if (!formData.diseaseDescription.trim()||!formData.Specialist.trim()||!formData.hospital.trim())
+          {
+            alert("Please fill the form Correctly!")
+            return;
+          }
+        }
       setCurrentStep(currentStep + 1);
     };
   
@@ -245,7 +270,6 @@ function PatientForm()
       if (currentStep !== 3) {
         return;
       }
-      //console.log('Form Data Submitted:', formData);
       const formPayload = { ...formData, id: Date.now() }; // Adding a unique ID based on timestamp
       //console.log('Form Data Submitted:', formData);
     

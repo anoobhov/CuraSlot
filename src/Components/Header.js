@@ -182,16 +182,16 @@ function Footer()
               <p>We simplifies hospital management with efficient queuing models, OPDs & inventory management</p>
             </div>
 
-            <div className="w-[25vw]">
+            <div className="w-[13vw]">
             <h1 className="text-xl font-semibold mb-1">Quick Links</h1>
-            <p className="hover:text-blue-400 hover:cursor-pointer mb-0.5">&#x2022; Appointment</p>
+            <p className="hover:text-pink-400 hover:cursor-pointer mb-0.5">&#x2022; Appointment</p>
             <p className="hover:text-blue-400 hover:cursor-pointer mb-0.5">&#x2022; Bed Availability</p>
-            <p className="hover:text-blue-400 hover:cursor-pointer mb-0.5">&#x2022; Urgent Admission</p>
-            <p className="hover:text-blue-400 hover:cursor-pointer mb-0.5">&#x2022; About Us</p>
-            <p className="hover:text-blue-400 hover:cursor-pointer mb-0.5">&#x2022; Career</p>
+            <p className="hover:text-red-500 hover:cursor-pointer mb-0.5">&#x2022; Urgent Admission</p>
+            <p className="hover:text-purple-400 hover:cursor-pointer mb-0.5">&#x2022; About Us</p>
+            <p className="hover:text-green-400 hover:cursor-pointer mb-0.5">&#x2022; Career</p>
             </div>
 
-            <div className="flex justify-center items-center  bg-transparent">
+            <div className="flex justify-center items-center  bg-transparent w-[25vw]">
       <FlipCard />
     </div>
     </div>
@@ -207,12 +207,12 @@ const FlipCard = () => {
     <div className="w-64 h-40 perspective group cursor-pointer ">
       <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
         {/* Front Side */}
-        <div className="absolute w-full h-full backface-hidden py-5 bg-gradient-to-r from-blue-400 to-blue-300 backdrop-blur-md bg-opacity-60 text-gray-700 font-semibold text-2xl flex items-center justify-center rounded-xl shadow-xl">
+        <div className="absolute w-full h-full backface-hidden py-5 bg-gradient-to-r from-purple-400 to-blue-300 backdrop-blur-md bg-opacity-60 text-gray-700 font-semibold text-2xl flex items-center justify-center rounded-xl shadow-xl">
         &#128222;Contact us
         </div>
 
         {/* Back Side */}
-        <div className="absolute w-full h-full backface-hidden rotate-y-180 py-5 bg-gradient-to-r from-blue-700 to-blue-500 backdrop-blur-md bg-opacity-60 text-white flex flex-col items-center justify-center rounded-xl shadow-xl p-4">
+        <div className="absolute w-full h-full backface-hidden rotate-y-180 py-5 bg-gradient-to-r from-pink-700 to-pink-500 backdrop-blur-md bg-opacity-60 text-white flex flex-col items-center justify-center rounded-xl shadow-xl p-4">
           <h1 className="text-lg font-bold">📍Address</h1>
           <p className="text-sm text-center">27A, Ballygunge Park Road, Kolkata, West Bengal 700019</p>
           <h1 className="text-lg font-bold">✉️Email</h1>
