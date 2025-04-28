@@ -2,8 +2,10 @@ import { useState } from "react";
 import { hospitallist } from "../Utils/HospitalList";
 import AnimateBg from "./AnimateBg";
 import Nav from "./Nav";
+import { useNavigate } from "react-router-dom";
 export default function Urgent()
 {
+    const navigate = useNavigate()
     const [formData, setFormData] = useState(
         {
             name: '',
@@ -24,8 +26,18 @@ export default function Urgent()
 
       const handleSubmit = (event) => {
         event.preventDefault();
-        console.log('Form Data Submitted:', formData);
-        // Here you would typically send the data to your backend
+        if (!formData.name.trim()||!formData.age.trim()||!formData.contact.trim()||!formData.reason.trim())
+          {
+            alert("Please fill the form Correctly!")
+            return;
+          }
+        alert("Urgent Admission Confirmed!")
+        const formPayload = { ...formData, id: Date.now() };
+        const existingAppointments = JSON.parse(localStorage.getItem('urgent')) || [];
+        existingAppointments.push(formPayload);
+        localStorage.setItem('urgent', JSON.stringify(existingAppointments));
+        navigate('/myapt')
+        //console.log('Form Data Submitted:', formData);
       };
     return (
         <div>
@@ -43,6 +55,7 @@ export default function Urgent()
               name="name"
               value={formData.name}
               onChange={handleChange}
+              required
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
@@ -56,6 +69,7 @@ export default function Urgent()
               name="age"
               value={formData.age}
               onChange={handleChange}
+              required
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
@@ -68,6 +82,7 @@ export default function Urgent()
                     name="hospital"
                     value={formData.hospital}
                     onChange={handleChange}
+                    required
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   >
                     <option value="">Select Hospital</option>
@@ -90,6 +105,7 @@ export default function Urgent()
               name="contact"
               value={formData.contact}
               onChange={handleChange}
+              required
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
@@ -103,12 +119,13 @@ export default function Urgent()
           name="reason"
           value={formData.reason}
           onChange={handleChange}
+          required
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         >
           <option value="">Select Reason</option>
-          <option value="accident">Accident</option>
-          <option value="burn">Burn</option>
-          <option value="heart-attack">Chest Pain</option>
+          <option value="Accident">Accident</option>
+          <option value="Burn">Burn</option>
+          <option value="Chest_Pain">Chest Pain</option>
           <option value="other">Other</option>
         </select>
       </div>
