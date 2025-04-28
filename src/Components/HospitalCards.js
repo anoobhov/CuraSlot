@@ -46,9 +46,18 @@ const Hcard = ({ hospitalList }) => {
           </p>
 
           {/* Beds */}
+          <h1 className="text-sm font-medium text-gray-800 text-center">🛏️Beds Available: </h1>
           <p className="text-sm font-medium text-gray-700 text-center">
-            🛏️ Beds Available:{" "}
-            <span className="text-blue-600">{hospital.beds_available}</span>
+             General:{" "}
+            <span className="text-blue-600">{hospital.general_bed}</span>
+          </p>
+          <p className="text-sm font-medium text-gray-700 ">
+             ICU :{" "}
+            <span className="text-blue-600">{hospital.ICU}</span>
+          </p>
+          <p className="text-sm font-medium text-gray-700 ">
+             CCU :{" "}
+            <span className="text-blue-600">{hospital.CCU}</span>
           </p>
           {/* Location link */}
           <a className="text-sm font-medium text-gray-700 text-center mt-3 p-0 hover:underline decoration-dotted" 
