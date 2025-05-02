@@ -6,6 +6,7 @@ import HospitalCards from "./Components/HospitalCards";
 import { BrowserRouter,Route,Routes } from "react-router-dom";
 import Urgent from "./Components/Urgent";
 import MyAppointments from "./Components/MyAppointments";
+import HospitalRouteMap from "./Components/HospitalRoute";
 function App()
 {
     return(
@@ -16,6 +17,7 @@ function App()
             <Route path="/BedAvl" element={<HospitalCards />} />
             <Route path="/urgent" element={<Urgent />} />
             <Route path="/myapt" element={<MyAppointments />} />
+            <Route path="/route" element={<HospitalRouteMap/>}/>
             </Routes>
         </BrowserRouter>
     )

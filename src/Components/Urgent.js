@@ -3,6 +3,7 @@ import { hospitallist } from "../Utils/HospitalList";
 import AnimateBg from "./AnimateBg";
 import Nav from "./Nav";
 import { useNavigate } from "react-router-dom";
+import HospitalRouteMap from "./HospitalRoute";
 export default function Urgent()
 {
     const navigate = useNavigate()
@@ -15,6 +16,7 @@ export default function Urgent()
             reason: '',
         }
     )
+    const [selectedHospitalId, setSelectedHospitalId] = useState("");
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -22,6 +24,10 @@ export default function Urgent()
           ...formData,
           [name]: value,
         });
+        if (name === "hospital") {
+          setSelectedHospitalId(value);
+        }
+        // setSelectedHospitalId(event.target.value)
       };
 
       const handleSubmit = (event) => {
@@ -36,8 +42,12 @@ export default function Urgent()
         const existingAppointments = JSON.parse(localStorage.getItem('urgent')) || [];
         existingAppointments.push(formPayload);
         localStorage.setItem('urgent', JSON.stringify(existingAppointments));
-        navigate('/myapt')
-        //console.log('Form Data Submitted:', formData);
+       // const selectedHospitalId = event.target.value;
+      //  <HospitalRouteMap selectedHospitalId={selectedHospitalId} />
+        // navigate('/route')
+        navigate('/route', {
+          state: { selectedHospitalId } // ✅ Pass it like this
+        });
       };
     return (
         <div>
@@ -88,8 +98,9 @@ export default function Urgent()
                     <option value="">Select Hospital</option>
                     {
                       hospitallist.map((hospital) => (
-                          <option key={hospital.name} value={hospital.name}>
+                          <option key={hospital.id} value={hospital.id}>
                             {hospital.name}
+                            
                           </option>
                         ))
                     }
@@ -138,3 +149,4 @@ export default function Urgent()
         </div>
       );
 }
+//export {selectedHospitalId}
