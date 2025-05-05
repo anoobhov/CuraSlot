@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import logo from "../Utils/images/Screenshot_2025-05-05_062440-removebg-preview.png"
 export default function Nav()
 {
 
@@ -14,18 +15,22 @@ export default function Nav()
       setnavColor(false)
     }
   }
+  let h = 6;
   window.addEventListener('scroll',changeNavColor)
     return(
         <header>
             {/* Logo */}
             <div className={`top-0 fixed z-[100]  flex justify-between items-center w-full px-7 transition-all duration-600 linear ${
     navColor
-      ? "py-5 bg-gradient-to-r from-blue-300 to-blue-200 backdrop-blur-md bg-opacity-60 "
-      :"bg-white/10 backdrop-blur-md py-10"
+      ? `py-5 bg-gradient-to-r from-blue-300 to-blue-200 backdrop-blur-md bg-opacity-60 ${h=6}`
+      :`bg-white/10 backdrop-blur-md py-10 ${h=8}`
   }`}>
               <Link to="/">
-                <p className="font-extrabold text-2xl">CuraSlot</p>
-                </Link>
+                <div className="flex items-center space-x-2">
+                <img src={logo} className={`h-${h} w-auto`}  alt="logo" />
+                <span className="font-extrabold text-2xl">CuraSlot</span>
+                </div>
+              </Link>
                 <div>
                 
                 </div>
