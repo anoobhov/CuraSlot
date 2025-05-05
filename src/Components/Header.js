@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useHref } from "react-router-dom";
 import { useState } from "react";
 import Doctorsimg from "../Utils/images/Doctors.jpg"
 import Reviewimg from "../Utils/images/Review.jpg"
 import AnimateBg from "./AnimateBg";
 import Nav from "./Nav"
 import { motion, AnimatePresence } from "framer-motion";
+import { Target } from "lucide-react";
 export default function Header()
 {
 
@@ -216,7 +217,12 @@ const FlipCard = () => {
           <h1 className="text-lg font-bold">📍Address</h1>
           <p className="text-sm text-center">27A, Ballygunge Park Road, Kolkata, West Bengal 700019</p>
           <h1 className="text-lg font-bold">✉️Email</h1>
-          <p className="text-sm text-center">random@gmail.com</p>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=anubhavr219@gmail.com"
+            className="text-sm text-center block hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >anubhavr219@gmail.com</a>
         </div>
       </div>
     </div>
