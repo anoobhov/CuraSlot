@@ -54,6 +54,9 @@ function MyAppointments() {
           <p><strong>Symtoms Description:</strong> {appointment.diseaseDescription}</p>
           <p><strong>Appointment Date:</strong> {appointment.appointmentDate}</p>
           <p><strong>Appointment Time:</strong> {appointment.appointmentTime}</p>
+          <p><strong>Hospital:</strong> {appointment.hospital}</p>
+          <p><strong>Specialist:</strong> {appointment.Specialist}</p>
+          <p><strong>Queue:</strong> 3</p>
         </div>
         
       ))}

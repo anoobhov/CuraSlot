@@ -219,6 +219,8 @@ function PatientForm()
       diseaseDescription: '',
       appointmentDate: '',
       appointmentTime: '',
+      hospital: '',
+      Specialist:'',
       previousReports: null, // For file uploads
     });
     const navigate = useNavigate()
@@ -316,7 +318,7 @@ function PatientForm()
             </button>
           ) : (
             <button type="button" onClick={handleSubmit} className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
-              Submit
+              Book
             </button>
           )}
         </div>
