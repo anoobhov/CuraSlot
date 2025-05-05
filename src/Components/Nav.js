@@ -15,19 +15,19 @@ export default function Nav()
       setnavColor(false)
     }
   }
-  let h = 6;
+  // let h = 6;
   window.addEventListener('scroll',changeNavColor)
     return(
         <header>
             {/* Logo */}
             <div className={`top-0 fixed z-[100]  flex justify-between items-center w-full px-7 transition-all duration-600 linear ${
     navColor
-      ? `py-5 bg-gradient-to-r from-blue-300 to-blue-200 backdrop-blur-md bg-opacity-60 ${h=6}`
-      :`bg-white/10 backdrop-blur-md py-10 ${h=8}`
+      ? `py-5 bg-gradient-to-r from-blue-300 to-blue-200 backdrop-blur-md bg-opacity-60`
+      :`bg-white/10 backdrop-blur-md py-10`
   }`}>
               <Link to="/">
                 <div className="flex items-center space-x-2">
-                <img src={logo} className={`h-${h} w-auto`}  alt="logo" />
+                <img src={logo} className={`h-7 w-auto`}  alt="logo" />
                 <span className="font-extrabold text-2xl">CuraSlot</span>
                 </div>
               </Link>
