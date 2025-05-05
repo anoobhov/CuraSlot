@@ -24,7 +24,7 @@ export default function Nav()
       :"bg-white/10 backdrop-blur-md py-10"
   }`}>
               <Link to="/">
-                <p className="font-extrabold text-2xl">OPDs</p>
+                <p className="font-extrabold text-2xl">CuraSlot</p>
                 </Link>
                 <div>
                 

@@ -178,7 +178,7 @@ function Footer()
         <div className="flex justify-between">
             {/* about app */}
             <div className="w-[25vw]">
-              <h1 className="text-2xl font-bold">OPDs</h1>
+              <h1 className="text-2xl font-bold">CuraSlot</h1>
               <p>We simplifies hospital management with efficient queuing models, OPDs & inventory management</p>
             </div>
 
@@ -196,7 +196,7 @@ function Footer()
     </div>
     </div>
     <hr className="mt-6"></hr>
-    <h1 className="text-center mt-6">&copy;2025 OPD.All rights reserved.</h1>
+    <h1 className="text-center mt-6">&copy;2025 CuraSlot.All rights reserved.</h1>
         </footer>
       </>
     )
